@@ -1,0 +1,5 @@
+#!/bin/sh
+for d in $(find /data/chamal/projects/atalpala/raw_data/from_Schizconnect_T1_NC_SZ_SAPS_SANS_XC/T3/NMorph/* -name *DICOM*); do
+	echo "$d/files/"
+	#eval "dcm2mnc -usecoordinates $d/files/ /data/chamal/projects/atalpala/processed_data/from_Schizconnect_T1_NC_SZ_SAPS_SANS_XC/changeToMinc/NMorph/T3/DICOM/"
+done
