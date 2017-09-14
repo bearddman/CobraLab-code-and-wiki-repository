@@ -1,0 +1,10 @@
+#!/bin/sh
+
+filename='list.txt'
+for next in `cat $filename`
+do
+	d=$(find /data/chamal/projects/atalpala/processed_data/changeToMinc/NUSDAST/* -name "*E0$next*")
+	temp2=$(echo $d | rev | cut -d '.' -f2 | cut -d '/' -f1 | rev)
+	#echo ${temp2}_AVG
+	echo "antsRegistration-coregister-average-withN4.sh /data/chamal/projects/atalpala/processed_data/changeToMinc/NUSDAST/${temp2}_AVG.mnc" $d >> joblist
+done
